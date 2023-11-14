@@ -32,6 +32,10 @@ header {
   .container {
     justify-content: space-around;
   }
+
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 #logo {
@@ -44,40 +48,61 @@ nav {
 }
 
 .hamburger-menu {
-  margin-right: 45px;
+  margin-right: 40px;
 }
 
-ul.mobile.active {
-  position: absolute;
-  top: 35px;
-  right: -24px;
-  background: rgba(0, 0, 0, 0.466);
+ul.mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 150px;
   border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  top: 35px;
+  right: -24px;
+  background: rgba(0, 0, 0, 0.466);
+  border-top: 1px solid white;
+  overflow: hidden; /* Importante para ocultar o conteúdo que ultrapassa a altura máxima */
+  height: 0;
+  opacity: 0;
+  transition: height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  user-select: none;
 }
 
-.mobile.active li a {
+.mobile.active {
+  height: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile li a {
   margin: 15px 0px;
   padding: 0px 20px;
   display: block;
   width: 100%;
 }
 
-.mobile.active li a:hover {
+.mobile.inactive {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.mobile li a:hover {
   color: rgb(185, 185, 185);
   transition-duration: 300ms;
 }
 
 /* Menu para versão Tablet e Acima */
-.links.inactive {
+
+.links {
   display: none;
 }
 
-.links.active {
-  display: flex;
+@media (min-width: 601px) {
+  .links {
+    display: flex;
+  }
 }
 
 .links li {
@@ -133,4 +158,42 @@ main {
 .showcase button:hover {
   background: #1ed760;
   transition-duration: 300ms;
+}
+
+/* Footer */
+
+footer {
+  background: black;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-logo {
+  max-width: 100px;
+  height: auto;
+}
+
+.footer-container {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.options-list h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  color: rgb(168, 168, 168);
+  letter-spacing: 0.75px;
+}
+
+.options-list li {
+  padding-top: 20px;
+  margin-bottom: 3px;
+}
+
+.options-list li a:hover {
+  color: #1ed760;
 }
