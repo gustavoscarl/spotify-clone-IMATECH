@@ -12,7 +12,7 @@
 
 /* Header e parte superior do site */
 header {
-  padding: 5px;
+  padding: 5px 15px;
   background-color: rgba(0, 0, 0, 0.562);
   position: fixed;
   top: 0;
@@ -24,31 +24,73 @@ header {
   margin: 0;
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 601px) {
+  .container {
+    justify-content: space-around;
+  }
 }
 
 #logo {
   max-width: 100px;
 }
 
-@media (min-width: 601px) {
-  .links {
-    display: flex;
-  }
+/* Menu para versão Mobile */
+nav {
+  position: relative;
+}
 
-  .links li {
-    padding: 0px 10px;
-  }
+.hamburger-menu {
+  margin-right: 45px;
+}
 
-  .links li a:hover {
-    color: rgb(185, 185, 185);
-    transition-duration: 300ms;
-  }
+ul.mobile.active {
+  position: absolute;
+  top: 35px;
+  right: -24px;
+  background: rgba(0, 0, 0, 0.466);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  border-radius: 0px 0px 3px 3px;
+}
 
-  ul.links li:nth-child(3) {
-    border-right: 1px solid rgb(255, 255, 255);
-  }
+.mobile.active li a {
+  margin: 15px 0px;
+  padding: 0px 20px;
+  display: block;
+  width: 100%;
+}
+
+.mobile.active li a:hover {
+  color: rgb(185, 185, 185);
+  transition-duration: 300ms;
+}
+
+/* Menu para versão Tablet e Acima */
+.links.inactive {
+  display: none;
+}
+
+.links.active {
+  display: flex;
+}
+
+.links li {
+  padding: 0px 10px;
+}
+
+.links li a:hover {
+  color: rgb(185, 185, 185);
+  transition-duration: 300ms;
+}
+
+ul.links li:nth-child(3) {
+  border-right: 1px solid rgb(255, 255, 255);
 }
 
 /* Corpo do site, contendo showcase e button */

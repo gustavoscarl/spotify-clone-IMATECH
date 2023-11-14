@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
    <!-- Cabeçalho do Site -->
@@ -18,7 +18,16 @@
         <a href="#"><img id="logo" src="img/logo (4).png" alt="Marca do Spotify, três ondas sonoras pretas em um fundo branco"></a>
       </div>
       <nav>
-        <ul class="links">
+        <div class="hamburger-menu"><i class="fa fa-bars" style="font-size:24px"></i></div>
+        <ul class="mobile active">
+          <li><a href="#">Premium</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li><a href="#">Baixar</a></li>
+          <li><a href="#">Inscreva-se</a></li>
+          <li><a href="#">Entrar</a></li>
+        </ul>
+      <!-- Versão de navbar para desktop -->
+        <ul class="links inactive">
           <li><a href="#">Premium</a></li>
           <li><a href="#">Ajuda</a></li>
           <li><a href="#">Baixar</a></li>
