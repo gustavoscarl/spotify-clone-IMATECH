@@ -28,7 +28,7 @@ header {
   align-items: center;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 751px) {
   .container {
     justify-content: space-around;
   }
@@ -89,7 +89,7 @@ ul.mobile {
 }
 
 .mobile li a:hover {
-  color: rgb(185, 185, 185);
+  color: #1ed760;
   transition-duration: 300ms;
 }
 
@@ -99,7 +99,7 @@ ul.mobile {
   display: none;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 751px) {
   .links {
     display: flex;
   }
@@ -110,7 +110,7 @@ ul.mobile {
 }
 
 .links li a:hover {
-  color: rgb(185, 185, 185);
+  color: #1ed760;
   transition-duration: 300ms;
 }
 
@@ -196,4 +196,128 @@ footer {
 
 .options-list li a:hover {
   color: #1ed760;
+}
+
+.footer-links {
+  margin-top: 100px;
+  display: flex;
+}
+
+.circle-link {
+  margin-right: 20px;
+  background: rgb(48, 48, 48);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-item:hover {
+  color: #1ed760;
+}
+
+.footer-final {
+  margin-top: 50px;
+  font-size: 10px;
+  width: 100%;
+}
+
+.politics-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12.5px;
+}
+
+.politics-list li {
+  padding-top: 15px;
+  padding-right: 25px;
+}
+
+.politics-list li a {
+  color: rgb(185, 185, 185);
+}
+
+.politics-list li a:hover {
+  color: #1ed760;
+}
+
+.language {
+  width: 50%;
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transform: translateY(-25%);
+}
+
+.language-list li {
+  padding-top: 15px;
+  color: rgb(185, 185, 185);
+}
+
+.language-list li a {
+  color: rgb(185, 185, 185);
+  &:hover {
+    color: #1ed760;
+  }
+}
+
+.final-container {
+  display: flex;
+  width: 100%;
+}
+
+.brasil-flag {
+  max-width: 20px;
+  height: auto;
+  margin-left: 5px;
+  transform: translateY(25%);
+}
+
+@media (min-width: 751px) {
+  .desktop-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .options {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-logo {
+    margin-top: 50px;
+  }
+
+  .options div {
+    margin-left: 50px;
+  }
+
+  .footer-links {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .language {
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+  }
+
+  .politics {
+    font-size: 14px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
 }

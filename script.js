@@ -21,6 +21,6 @@ function closeDropdown(sizeWindow){
   }
 }
 
-let sizeWindow = window.matchMedia("(min-width:601px)");
+let sizeWindow = window.matchMedia("(min-width:751px)");
 
 window.addEventListener('resize', () => {closeDropdown(sizeWindow)})
