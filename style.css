@@ -2,8 +2,9 @@
   margin: 0px;
   padding: 0px;
   text-decoration: none;
-  color: rgb(224, 224, 224);
+  color: rgb(255, 255, 255);
   list-style: none;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -13,11 +14,12 @@ header {
 }
 
 .container {
-  max-width: 85%;
+  max-width: 95%;
   margin: 0;
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
+  align-items: center;
 }
 
 #logo {
@@ -29,5 +31,32 @@ header {
 }
 
 .links li {
-  margin: 0px 5px;
+  padding: 0px 10px;
+}
+
+.links li a:hover {
+  color: rgb(185, 185, 185);
+  transition-duration: 300ms;
+}
+
+ul.links li:nth-child(3) {
+  border-right: 1px solid rgb(255, 255, 255);
+}
+
+body {
+  background-image: url("./img/showcase.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase h2 {
+  font-size: 4rem;
 }
