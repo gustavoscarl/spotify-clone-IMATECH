@@ -1,3 +1,4 @@
+/* Padronização de estilos globais */
 * {
   margin: 0px;
   padding: 0px;
@@ -5,12 +6,17 @@
   color: rgb(255, 255, 255);
   list-style: none;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  border: none;
 }
 
+/* Header e parte superior do site */
 header {
-  background-color: black;
-  opacity: 0.75;
   padding: 5px;
+  background-color: rgba(0, 0, 0, 0.562);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .container {
@@ -26,37 +32,63 @@ header {
   max-width: 100px;
 }
 
-.links {
-  display: flex;
+@media (min-width: 601px) {
+  .links {
+    display: flex;
+  }
+
+  .links li {
+    padding: 0px 10px;
+  }
+
+  .links li a:hover {
+    color: rgb(185, 185, 185);
+    transition-duration: 300ms;
+  }
+
+  ul.links li:nth-child(3) {
+    border-right: 1px solid rgb(255, 255, 255);
+  }
 }
 
-.links li {
-  padding: 0px 10px;
-}
-
-.links li a:hover {
-  color: rgb(185, 185, 185);
-  transition-duration: 300ms;
-}
-
-ul.links li:nth-child(3) {
-  border-right: 1px solid rgb(255, 255, 255);
-}
-
-body {
-  background-image: url("./img/showcase.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
+/* Corpo do site, contendo showcase e button */
 
 main {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("./img/showcase.webp");
+  background-color: rgba(0, 0, 0, 0.438);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: color;
 }
 
 .showcase h2 {
   font-size: 4rem;
+  text-align: center;
+}
+
+.showcase p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.showcase button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 35px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  background: #1db954;
+  cursor: pointer;
+}
+
+.showcase button:hover {
+  background: #1ed760;
+  transition-duration: 300ms;
 }
